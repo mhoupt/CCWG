@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>2015 Women's Summer Bible Study Registration Form</title>
+  <link href="styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <div id="page-wrap">
+    
+    <h2>2015 Women's Summer Bible Study Registration Form</h2>
+    </br>
+    </br>
+    <form action="mailtest.php" method="post" id="change-form">
+    
+        <input type="hidden" name="token">
+        <table>
+            <tr>
+                <td>Your Name:</td>
+                <td><input type="text" id="name" name="name" class="required name" minlength="2" required/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" class="required email"/></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone" class="required phone number" required/></td>
+            </tr>
+            <tr>
+                <td>Day to attend:</td>
+                <td><select name="studyday" id="studyday" required>
+                        <option value="selected" selected disabled>Please choose one</option>
+                        <option value="monday">Mondays @ 6:55p</option>
+                        <option value="tuesday">Tuesdays @ 9:30a</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>
+                <td>Childcare:</td>
+                <td><select name="childcareneeded" onchange="childcare()" id="childcareneeded" required>
+                        <option value="selected" selected disabled>Please choose one</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </table>
+        <br>
+        <div class="childhidden" id="child1">
+            <table>
+                <tr>
+                    <td style="font-weight:bold">First Child:</td>
+                </tr>
+                <tr>
+                    <td>Child's Name:</td>
+                    <td><input type="text" name="childname1"/></td>
+                    <td>Child's Age:</td>
+                    <td><input type="text" name="childage1"/></td>
+                </tr>
+                <tr>
+                    <td>Child's DOB:</td>
+                    <td><input type="text" name="childdob1"/></td>
+                    <td>Child's Grade:</td>
+                    <td><input type="text" name="childgrade1"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="childhidden">
+            <table>
+                <tr>
+                    <td style="font-weight:bold">Second Child:</td>
+                </tr>
+                <tr>
+                    <td>Child's Name:</td>
+                    <td><input type="text" name="childname2"/></td>
+                    <td>Child's Age:</td>
+                    <td><input type="text" name="childage2"/></td>
+                </tr>
+                <tr>
+                    <td>Child's DOB:</td>
+                    <td><input type="text" name="childdob2"/></td>    
+                    <td>Child's Grade:</td>
+                    <td><input type="text" name="childgrade2"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="childhidden">
+            <table>
+                <tr>
+                    <td style="font-weight:bold">Third Child:</td>
+                </tr>
+                <tr>
+                    <td>Child's Name:</td>
+                    <td><input type="text" name="childname3"/></td>
+                    <td>Child's Age:</td>
+                    <td><input type="text" name="childage3"/></td>
+                </tr>
+                <tr>
+                    <td>Child's DOB:</td>
+                    <td><input type="text" name="childdob3"/></td>    
+                    <td>Child's Grade:</td>
+                    <td><input type="text" name="childgrade3"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="childhidden">
+            <table>
+                <tr>
+                    <td style="font-weight:bold">Fourth Child:</td>
+                </tr>
+                <tr>
+                    <td>Child's Name:</td>
+                    <td><input type="text" name="childname4"/></td>
+                    <td>Child's Age:</td>
+                    <td><input type="text" name="childage4"/></td>
+                </tr>
+                <tr>
+                    <td>Child's DOB:</td>
+                    <td><input type="text" name="childdob4"/></td>    
+                    <td>Child's Grade:</td>
+                    <td><input type="text" name="childgrade4"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="childhidden">
+            <table>
+                <tr>
+                    <td style="font-weight:bold">Fifth Child:</td>
+                </tr>
+                <tr>
+                    <td>Child's Name:</td>
+                    <td><input type="text" name="childname5"/></td>
+                    <td>Child's Age:</td>
+                    <td><input type="text" name="childage5"/></td>
+                </tr>
+                <tr>
+                    <td>Child's DOB:</td>
+                    <td><input type="text" name="childdob5"/></td>    
+                    <td>Child's Grade:</td>
+                    <td><input type="text" name="childgrade5"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="childhidden">    
+            <br>
+            <span><input type="button" id="addchild1" value="Add Child" onclick="addchild()"/></span>
+            <span><input type="button" id="remove" value="Remove Child" onclick="child()"/></span>
+            <br>
+            <br>
+        </div>        
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+        
+    $(document).ready(function(){
+        
+       function childcare(){
+           
+           $alert("change");
+           
+       };
+        
+    });
+    
+    </script>
+    </body>
+</html>
