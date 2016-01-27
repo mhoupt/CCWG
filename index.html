@@ -52,10 +52,10 @@
         </table>
         </table>
         <br>
-        <div class="childhidden" id="child1">
+        <div class="childhidden child1show">
             <table>
                 <tr>
-                    <td style="font-weight:bold">First Child:</td>
+                    <th>First Child:</th>
                 </tr>
                 <tr>
                     <td>Child's Name:</td>
@@ -74,7 +74,7 @@
         <div class="childhidden">
             <table>
                 <tr>
-                    <td style="font-weight:bold">Second Child:</td>
+                    <th>Second Child:</th>
                 </tr>
                 <tr>
                     <td>Child's Name:</td>
@@ -93,7 +93,7 @@
         <div class="childhidden">
             <table>
                 <tr>
-                    <td style="font-weight:bold">Third Child:</td>
+                    <th>Third Child:</th>
                 </tr>
                 <tr>
                     <td>Child's Name:</td>
@@ -112,7 +112,7 @@
         <div class="childhidden">
             <table>
                 <tr>
-                    <td style="font-weight:bold">Fourth Child:</td>
+                    <th>Fourth Child:</th>
                 </tr>
                 <tr>
                     <td>Child's Name:</td>
@@ -131,7 +131,7 @@
         <div class="childhidden">
             <table>
                 <tr>
-                    <td style="font-weight:bold">Fifth Child:</td>
+                    <th>Fifth Child:</th>
                 </tr>
                 <tr>
                     <td>Child's Name:</td>
@@ -147,7 +147,7 @@
                 </tr>
             </table>
         </div>
-        <div class="childhidden">    
+        <div class="childhidden child1show">    
             <br>
             <span><input type="button" id="addchild1" value="Add Child" onclick="addchild()"/></span>
             <span><input type="button" id="remove" value="Remove Child" onclick="child()"/></span>
@@ -161,12 +161,28 @@
         
     $(document).ready(function(){
         
-       function childcare(){
-           
-           
-       };
-        
     });
+    
+    </script>
+    <script>
+        
+        function childcare(){
+            
+            var childcare = document.getElementById("childcareneeded").value;
+            //show first child
+            if (childcare == "yes"){
+                
+                $(".child1show").slideDown(300);
+                
+            }
+            else if (childcare == "no"){
+                
+                $(".childhidden").slideUp(300);
+                
+            }
+            
+            
+        }
     
     </script>
     </body>

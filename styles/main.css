@@ -9,3 +9,15 @@
     display: inline;
     
 }
+
+#remove {
+    
+    display: none;
+    
+}
+
+th {
+    
+    text-align: left;
+    
+}
