@@ -27,7 +27,7 @@ $(window).load(function() {
         animSpeed: 500, // Slide transition speed
         pauseTime: 8000, // How long each slide will show
         startSlide: 0, // Set starting Slide (0 index)
-        pauseOnHover: true, // Stop animation while hovering
+        pauseOnHover: false, // Stop animation while hovering
     });
 });
 </script>
