@@ -52,7 +52,7 @@
         </table>
         </table>
         <br>
-        <div class="childhidden child1show">
+        <div class="childhidden childshow">
             <table>
                 <tr>
                     <th>First Child:</th>
@@ -172,14 +172,22 @@
             //show first child
             if (childcare == "yes"){
                 
-                $(".child1show").slideDown(300);
+                $(".childshow").slideDown(300);
+                $("div".next).addClass("showNext");
                 
             }
             else if (childcare == "no"){
                 
                 $(".childhidden").slideUp(300);
+                $("div").removeClass("showNext");
                 
             }
+            
+            
+        };
+        
+        function addchild(){
+            
             
             
         }
