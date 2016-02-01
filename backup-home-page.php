@@ -19,7 +19,7 @@ analyticscodeblock
   <script src="userdocs/js/mainNav.js"></script>
   <link rel="stylesheet" href="userdocs/css/inc/nivo-slider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="userdocs/css/inc/default.css" type="text/css" media="screen" />
-<script type="text/javascript" src="userdocs/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
     $('#slider').nivoSlider({

@@ -71,7 +71,7 @@
                 </tr>
             </table>
         </div>
-        <div class="childhidden">
+        <div class="childhidden shownext">
             <table>
                 <tr>
                     <th>Second Child:</th>
@@ -147,13 +147,13 @@
                 </tr>
             </table>
         </div>
-        <div class="childhidden child1show">    
-            <br>
-            <span><input type="button" id="addchild1" value="Add Child" onclick="addchild()"/></span>
-            <span><input type="button" id="remove" value="Remove Child" onclick="child()"/></span>
-            <br>
-            <br>
-        </div>        
+          
+        <br>
+        <span><input type="button" id="addbtn" value="Add Child" onclick="addchild()"/></span>
+        <span><input type="button" id="removebtn" value="Remove Child" onclick="childrem()"/></span>
+        <br>
+        <br>
+             
     
     <script src="jquery.js"></script>
     
@@ -172,14 +172,20 @@
             //show first child
             if (childcare == "yes"){
                 
-                $(".childshow").slideDown(300);
-                $("div".next).addClass("showNext");
+                $("div:first .childshow").slideDown(300, function(){
+                    
+                    $(this).next().addClass(".childshow"); 
+                    
+                });
+                $("#addbtn").slideDown(300);
                 
             }
             else if (childcare == "no"){
                 
+                $(".childshow").slideUp(300);
                 $(".childhidden").slideUp(300);
-                $("div").removeClass("showNext");
+                $("#addbtn").slideUp(300);
+                $("#removebtn").slideUp(300);
                 
             }
             
@@ -188,6 +194,19 @@
         
         function addchild(){
             
+            $(".shownext").slideDown(300);
+            $(".shownext").addClass("showprev");
+            $(".showprev").next("div").addClass("shownext");
+            $(".showprev").removeClass("shownext");
+            $("#removebtn").slideDown(300);
+            
+        }
+        
+        function childrem(){
+            
+            $(".shownext").slideUp(300);
+            $(".showprev").addClass("shownext");
+            $(".shownext").removeClass("showprev");
             
             
         }

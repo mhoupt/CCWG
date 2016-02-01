@@ -10,7 +10,13 @@
     
 }
 
-#remove {
+#addbtn {
+    
+    display: none;
+    
+}
+
+#removebtn {
     
     display: none;
     
