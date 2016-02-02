@@ -172,20 +172,17 @@
             //show first child
             if (childcare == "yes"){
                 
-                $("div:first .childshow").slideDown(300, function(){
-                    
-                    $(this).next().addClass(".childshow"); 
-                    
-                });
+                $(".childshow").slideDown(300);
                 $("#addbtn").slideDown(300);
                 
             }
             else if (childcare == "no"){
                 
-                $(".childshow").slideUp(300);
                 $(".childhidden").slideUp(300);
                 $("#addbtn").slideUp(300);
                 $("#removebtn").slideUp(300);
+                $(".childhidden").removeClass("shownext");
+                $(".childshow").next().addClass("shownext");ß
                 
             }
             
@@ -194,20 +191,26 @@
         
         function addchild(){
             
-            $(".shownext").slideDown(300);
-            $(".shownext").addClass("showprev");
-            $(".showprev").next("div").addClass("shownext");
-            $(".showprev").removeClass("shownext");
+            $(".shownext").slideDown(300, function(){
+              
+                $(this).addClass("showprev");
+                $(this).removeClass("shownext");
+                $(this).next("div").addClass("shownext");
+                
+            });
+            
             $("#removebtn").slideDown(300);
             
         }
         
         function childrem(){
             
-            $(".shownext").slideUp(300);
-            $(".showprev").addClass("shownext");
-            $(".shownext").removeClass("showprev");
-            
+            $(".showprev").last().slideUp(300, function(){
+                
+                $(".shownext").removeClass("shownext");
+                $(this).removeClass("showprev").addClass("shownext");
+                
+            });
             
         }
     
